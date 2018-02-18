@@ -1,0 +1,7 @@
+fm_hour = int(input())
+fm_min = int(input())
+fm_sec = int(input())
+sm_hour = int(input())
+sm_min = int(input())
+sm_sec = int(input())
+print ((sm_hour*60*60+sm_min*60+sm_sec) - (fm_hour*60*60+fm_min*60+fm_sec))
