@@ -63,8 +63,10 @@ int main() {
             cin >> OGraph[i][j];
         }
     }
+
     int i = 0;
     int j = 0;
+
     while (i < n) {
         while (j < n) {
             if (OGraph[i][j] == OGraph[j][i]) {
