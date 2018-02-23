@@ -2,6 +2,7 @@ Debug
 .vs
 cmake-build-debug
 .idea
+venv
 
 
 # Prerequisites
