@@ -79,7 +79,8 @@ int pathCounterFromTo(const vector<vector<int>> &g, int start, int n, int end) {
             assert(suggested_depth >= depth[to]);
 
             if (suggested_depth == depth[to]) {
-                ans[to]++;
+                // не понятно так: ans[to]++; или
+                ans[to]+=ans[v];
             }
 
 
