@@ -25,13 +25,13 @@ int main() {
             cin >> matrix[i][k];
         }
     }
-    vector<vector<bool>> visited(n, vector<bool>(n, false));
+    //vector<vector<bool>> visited(n, vector<bool>(n, false));
     vector<int> potential;
     for (int i = 0; i < n; i++) {
         for (int k = 0; k < n; k++) {
-            if (visited[i][k] == false) {
-                visited[i][k] = true;
-                visited[k][i] = true;
+//            if (visited[i][k] == false) {
+//                visited[i][k] = true;
+//                visited[k][i] = true;
                 if (matrix[i][k] != matrix[k][i]) {
                     if (matrix[i][k] == 1) {
                         potential.push_back(k);
@@ -40,14 +40,14 @@ int main() {
 //                                potential.erase(potential.begin() + m);
 //                            }
 //                        }
-                    } else {
-                        potential.push_back(i);
+//////////////////                    } else {
+//////////////////                        potential.push_back(i);
 //                        for (int l = 0; l < potential.size(); l++) {
 //                            if (matrix[potential[l]][k] == 0) {
 //                                potential.erase(potential.begin() + l);
 //                            }
 //                        }
-                    }
+                  //  }
                 }
             }
         }
