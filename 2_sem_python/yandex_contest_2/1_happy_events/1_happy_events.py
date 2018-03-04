@@ -1,25 +1,26 @@
-f_str = input()
-s_str = input()
-t_str = input()
-events = f_str.split(" ")
-happy = s_str.split(" ")
-sad = t_str.split(" ")
+events = list(map(int, input().split(" ")))
+happy = list(map(int, input().split(" ")))
+sad = list(map(int, input().split(" ")))
+
+my_dict = dict()
 
 res = 0
-i = 0
-k = 0
-n = 0
-m = 0
 
-for i in range(0, len(happy)):
-    for k in range(0, len(events)):
-        if events[k] == happy[i]:
-            res = res + 1
-            print("1")
+for e in happy:
+    my_dict[e] = 1
+for e in sad:
+    my_dict[e] = -1
+for e in events:
+    if e in my_dict:
+        res += my_dict[e]
 
-for n in range(0, len(sad)):
-    for m in range(0, len(events)):
-        if events[m] == sad[n]:
-            res = res - 1
-            print("2")
+# i = 0
+# k = 0
+#
+# for i in range(len(happy)):
+#     for k in range(len(events)):
+#         if events[k] == happy[i]:
+#             res = res + 1
+#         elif events[k] == sad[i]:
+#             res = res - 1
 print(res)
