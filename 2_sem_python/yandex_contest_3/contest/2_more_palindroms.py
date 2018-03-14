@@ -1,13 +1,10 @@
 def palindrom(str):
     rts = str
-    rev_str = ""
-    for c in range(len(rts)):
-        rev_str = rts[c] + rev_str
+    rev_str = rts[::-1]
     if rev_str == rts:
-        ret = True
+        return True
     else:
-        ret = False
-    return ret
+        return False
 
 
 s = str(input())
@@ -27,8 +24,8 @@ else:
         if palindrom(rev) is True:
             break
         rev = s
+    rev = s
     concat = ""
-    print(rev)
     for j in range(1, size + 1):
         concat = rev[j] + concat
         n += 1
@@ -36,7 +33,7 @@ else:
         if palindrom(rev) is True:
             break
         rev = s
-    print(rev)
+    rev = s
     concat = ""
     for l in range(1, size + 1):
         concat = rev[0 - l] + concat
@@ -45,7 +42,5 @@ else:
         if palindrom(rev) is True:
             break
         rev = s
-    print(k)
-    print(rev)
     p = min(m, n)
     print(min(p, k))

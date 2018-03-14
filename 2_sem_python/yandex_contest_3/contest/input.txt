@@ -1,5 +1,6 @@
-     -m     
+-m -l -L -w
   there is one
     more
 example for 
  problem
+
