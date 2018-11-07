@@ -5,7 +5,6 @@
 #ifndef INC_3_SEMESTER_PRACTIC_FORMAL_LANGUAGES_SOLUTION_H
 #define INC_3_SEMESTER_PRACTIC_FORMAL_LANGUAGES_SOLUTION_H
 
-int foo(int x);
-
+int stackFill(std::string regExp, char x, int k);
 
 #endif //INC_3_SEMESTER_PRACTIC_FORMAL_LANGUAGES_SOLUTION_H

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(3_semester_practic_formal_languages)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 SET(CMAKE_BUILD_TYPE DEBUG)
 
 # SETTING UP GOOGLE TEST BEGIN
@@ -42,8 +42,18 @@ include_directories(include)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
-SET(SRC start.cpp tests/tests.cpp src/solution.cpp)
-SET(INCLUDE include/solution.h)
+SET(SRC
+        start.cpp
+        src/solution.cpp
+        )
 
-add_executable(solution ${SRC} ${INCLUDE})
+SET(TESTS
+        tests/tests.cpp
+        )
+
+SET(INCLUDE
+        include/solution.h
+        )
+
+add_executable(solution ${SRC} ${INCLUDE} ${TESTS})
 target_link_libraries(solution gtest_main)
